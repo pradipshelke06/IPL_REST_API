@@ -8,6 +8,7 @@ public class IplRestApiApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(IplRestApiApplication.class, args);
+		System.err.println("Api Started...");
 	}
 
 }
