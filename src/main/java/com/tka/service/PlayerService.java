@@ -7,35 +7,33 @@ import org.springframework.stereotype.Service;
 
 import com.tka.dao.PlayerDao;
 import com.tka.model.Player;
-
 @Service
 public class PlayerService {
-	
 	@Autowired
-	private PlayerDao playerdao;
+	private PlayerDao playerDao;
 	
 	public String addPlayer(Player player) {
 	
-		String msg = playerdao.addPlayer(player);
+		String msg = playerDao.addPlayer(player);
 		
 		return msg;
 		
 	}
 	public List<Player> getAllPlayers(){
 		
-		List<Player> allPlayers = playerdao.getAllPlayers();
+		List<Player> allPlayers = playerDao.getAllPlayers();
 		return allPlayers;
 		
 	}
 	
 	public Player getPlayerById(int id) {
-		Player player = playerdao.getPlayerById(id);
+		Player player = playerDao.getPlayerById(id);
 		
 		return player;
 		
 	}
 	public String deletePlayer(int id) {
-		int status =playerdao.deletePlayer(id);
+		int status =playerDao.deletePlayer(id);
 		if (status==0) {	
 			return "Player Not Found..";
 		}else {
@@ -45,7 +43,7 @@ public class PlayerService {
 		
 	}
 	public String updatePlayer(int id,Player player) {
-		int status = playerdao.updatePlayer(id, player);
+		int status = playerDao.updatePlayer(id, player);
 		if (status==0) {	
 			return "Player Not Found to Update..";
 		}else {

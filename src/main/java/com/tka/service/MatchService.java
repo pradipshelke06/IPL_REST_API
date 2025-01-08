@@ -7,10 +7,8 @@ import org.springframework.stereotype.Service;
 
 import com.tka.dao.MatchDao;
 import com.tka.model.Match;
-
 @Service
 public class MatchService {
-	
 	@Autowired
 	private MatchDao matchdao;
 	

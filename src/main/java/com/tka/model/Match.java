@@ -1,9 +1,17 @@
 package com.tka.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="Matches")
 public class Match {
+	@Id
 	private int matchId;
 	private String teamOneName;
 	private String teamTwoName;
+	//@Column(name = "match_date")
 	private String date;
 	private String venue;
 	private String result;
@@ -75,6 +83,7 @@ public class Match {
 		return "Match [matchId=" + matchId + ", teamOneName=" + teamOneName + ", teamTwoName=" + teamTwoName + ", date="
 				+ date + ", venue=" + venue + ", result=" + result + "]";
 	}
+
 	
 
 }

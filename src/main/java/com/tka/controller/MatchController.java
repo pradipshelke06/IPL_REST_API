@@ -14,11 +14,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.tka.model.Match;
 import com.tka.service.MatchService;
-
-
 @RestController
 public class MatchController {
-	
 	@Autowired
 	private MatchService matchService;
 	
@@ -58,5 +55,4 @@ public class MatchController {
 		String msg = matchService.updateMatch(id, match);
 		return msg;
 	}
-
 }

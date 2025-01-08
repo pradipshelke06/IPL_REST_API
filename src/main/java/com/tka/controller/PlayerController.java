@@ -14,11 +14,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.tka.model.Player;
 import com.tka.service.PlayerService;
-
-
 @RestController
 public class PlayerController {
-	
+
 	@Autowired
 	private PlayerService playerService;
 	
